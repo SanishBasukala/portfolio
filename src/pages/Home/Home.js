@@ -12,7 +12,7 @@ function Home() {
     return (
         <div className="page-container bg-[#E1E6EA] flex items-center h-[92vh]">
             <div className='flex-1 w-4/5'>
-                <div className='intro text-[2rem] text-secondary font-semibold'>I'm &nbsp;&nbsp;
+                <div className='intro text-[2rem] text-secondary font-semibold'>I'm &nbsp;
                     <TextAlternator text1={name} text2={designation}/>
                 </div>
                 <div className='description text-secondary mt-2 text-justify text-base max-w-44'>
