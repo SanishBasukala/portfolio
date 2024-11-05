@@ -1,0 +1,49 @@
+.company{
+    border: 1px solid #0073b1;
+    background-color: #0073b1;
+    color: white;
+    padding: 7px 2px 2px 15px;
+    font-weight: 500;
+    max-width: 220px;
+    min-width: 200px;
+    position: relative;
+    max-height: 45px;
+}
+
+.company .arrow{
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #0073b1;
+    border-bottom: 10px solid transparent;
+    transform: rotate(225deg);
+}
+.company .circle{
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: white;
+    border:2px solid #0073b1;
+    transform: translateY(-50%)
+}
+.dateRange{
+    font-size: .8rem;
+    position: absolute;
+    color: #0073b1;
+    right: -210px;
+    top: 9px;
+    text-align: left;
+    min-width: 210px;
+    border: 1px solid #b3b3b3;
+    padding: 2px;
+}
+.description{
+    font-family: "Roboto", 'Times New Roman', Times, serif;
+    font-size: .9rem;
+    max-width: 600px;
+}

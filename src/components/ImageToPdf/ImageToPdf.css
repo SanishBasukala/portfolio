@@ -1,0 +1,50 @@
+/* Button css */
+.downloadBtn {
+    border: 2px solid #686868;
+    padding: 4px 0px 4px 25px !important;
+    /* border-radius: 10px; */
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #686868;
+    transition: all .8s ease;
+    position: relative; 
+    overflow: hidden; 
+  }
+  
+  .downloadBtn:hover {
+    color: white;
+    background-color: #1089FF;
+    border-color: #1089FF;
+  }
+  
+  .downloadBtn .icon {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    left:10px;
+  }
+  
+  .downloadBtn:hover .icon {
+    animation: downloadAnimation 0.8s forwards;
+  }
+  
+  @keyframes downloadAnimation {
+    0% {
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    40% {
+        top: 100%;
+        opacity: 0;
+    }    
+    60% {
+        top: 0%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+  }

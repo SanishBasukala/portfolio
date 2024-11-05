@@ -1,0 +1,27 @@
+.intro span{
+    font-size: 2rem;
+    @apply text-tertiary
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .links a {
+    color: #000; 
+    text-decoration: none;
+    font-size: 1.7rem;
+  }
+  
+  .links a:hover {
+    color: #0073b1; 
+  }
+  
+  .links a:nth-child(2):hover {
+    color: #333; 
+  }
+  
+  .links a:last-child:hover {
+    color: #ea4335; 
+  }

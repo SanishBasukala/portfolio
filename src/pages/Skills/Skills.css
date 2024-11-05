@@ -1,0 +1,112 @@
+body{
+    --profiency-width:0;
+}
+
+/* Skills */
+.skills-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-top: 20px;
+    height: fit-content;
+    align-content: center;
+}
+
+.skill {
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #686868;
+    width: 9rem;
+    height: 3rem;
+    justify-self: center;
+    display: flex;
+    justify-content: space-evenlys;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+}
+
+.skill:hover {
+    box-shadow: #1088ff42  0px 8px 24px;
+}
+
+.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1088ff6c;
+    height: 100%;
+    animation: proficiencyAnimation 0.4s forwards;
+}
+
+@keyframes proficiencyAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--profiency-width);
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 70vh;
+}
+
+.project {
+    height: 18vh;
+    border-radius: 10px;
+    border: 1px solid rgb(224, 224, 224);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 16px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: all .3s ease;
+}
+
+.project:hover {
+    transform: translateY(-2px);
+}
+.project .img-container{
+    min-width: 270px;
+    overflow: hidden;
+}
+.project .img-container img{
+    width: 280px;
+}
+.appCapsule{
+    font-size: 0.8rem;
+    border-radius: 20px;
+    background-color: #525252;
+    padding: 2px 10px;
+    color: white;
+}
+.more-projects{
+    transition: .3s ease-in-out;
+}
+.more-projects:hover{
+    color: white;
+    background-color: #1089FF;
+}
+
+.more-projects:hover .arrow{
+    animation: poke .4s 2;
+    animation-delay: 0.2s;
+}
+
+@keyframes poke {
+      25% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+      75% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+}
