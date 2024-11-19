@@ -59,7 +59,7 @@ const TextAlternator = ({ text1, text2 }) => {
 
   return (
     <span>
-      {displayText}
+      <span className='displayText'>{displayText}</span>
       <span className="cursor">|</span>
     </span>
   );

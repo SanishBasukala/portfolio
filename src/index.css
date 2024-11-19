@@ -12,6 +12,7 @@ body{
 html{
     scroll-behavior: smooth;
 }
+
 .page-container{
     padding: 1rem 5rem;
 }
@@ -29,4 +30,15 @@ html{
     align-items: center;
     font-size: 3rem;
     display: none;
+}
+
+@media (max-width: 900px) {
+    .page-container {
+        padding: .5rem 2.5rem;
+    }
+}
+@media (max-width: 610px) {
+    .page-container {
+        padding: .2rem 1.5rem;
+    }
 }

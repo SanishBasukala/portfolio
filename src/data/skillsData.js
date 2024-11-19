@@ -7,47 +7,56 @@ const skills = [
     {
         name: "C#",
         proficiency: "70%",
-        icon: <img src={cSharp} width={28}/>
+        icon: <img src={cSharp} width={28}/>,
+         shortName: "C#"
     },
     {
         name: "React",
         proficiency: "40%",
-        icon: <FaReact style={{ color: '#61DBFB', fontSize: '24px',backgroundColor:'black' }} />
+        icon: <FaReact style={{ color: '#61DBFB', fontSize: '24px',backgroundColor:'black' }} />,
+         shortName: "React"
     },
     {
         name: "SQL",
         proficiency: "65%",
-        icon: <img src={sqlLogo} width={28}/>
+        icon: <img src={sqlLogo} width={28}/>,
+         shortName: "SQL"
     },
     {
         name: "Javascript",
         proficiency: "60%",
-        icon: <FaJs style={{ color: '#F7DF1E', fontSize: '24px' }} />
+        icon: <FaJs style={{ color: '#F7DF1E', fontSize: '24px' }} />,
+         shortName: "JS"
     },
     {
         name: "HTML",
         proficiency: "90%",
-        icon: <FaHtml5 style={{ color: '#E34F26', fontSize: '24px' }} />
+        icon: <FaHtml5 style={{ color: '#E34F26', fontSize: '24px' }} />,
+         shortName: "HTML"
     },
     {
         name: "CSS",
         proficiency: "70%",
-        icon: <FaCss3 style={{ color: '#1572B6', fontSize: '24px' }} />
+        icon: <FaCss3 style={{ color: '#1572B6', fontSize: '24px' }} />,
+         shortName: "CSS"
     },
     {
         name: "Unity",
         proficiency: "40%",
-        icon: <FaUnity style={{ color: '#1572B6', fontSize: '24px' }} />
+        icon: <FaUnity style={{ color: '#1572B6', fontSize: '24px' }} />,
+         shortName: "Unity"
     },
     {
         name: "Angular",
         proficiency: "60%",
-        icon: <FaAngular style={{ color: '#1572B6', fontSize: '24px' }} />
+        icon: <FaAngular style={{ color: '#1572B6', fontSize: '24px' }} />,
+         shortName: "Angular"
     },
     {
         name: "TypeScript",
         proficiency: "50%",
-        icon: <TbBrandTypescript  style={{ color: '#1572B6', fontSize: '24px' }} />
+        icon: <TbBrandTypescript  style={{ color: '#1572B6', fontSize: '24px' }} />,
+        shortName: "TS"
     }
 ]
 

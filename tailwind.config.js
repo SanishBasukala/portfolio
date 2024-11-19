@@ -20,7 +20,7 @@ module.exports = {
       'xl': {'max': '2023px'},
       'lg': {'max': '1200px'},
       'md': {'max': '900px'},
-      'sm': {'max': '900px'},
+      'sm': {'max': '610px'},
     }
   },
   plugins: [],

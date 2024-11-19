@@ -49,15 +49,7 @@ body{
     }
 }
 
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    height: 70vh;
-}
-
 .project {
-    height: 18vh;
     border-radius: 10px;
     border: 1px solid rgb(224, 224, 224);
     overflow: hidden;
@@ -66,15 +58,12 @@ body{
     transition: all .3s ease;
 }
 
-.project:hover {
-    transform: translateY(-2px);
-}
 .project .img-container{
-    min-width: 270px;
+    min-width: 100%;
     overflow: hidden;
 }
 .project .img-container img{
-    width: 280px;
+    width: 100%;
 }
 .appCapsule{
     font-size: 0.8rem;
@@ -109,4 +98,15 @@ body{
       100% {
         transform: translateX(0px);
       }
+}
+
+@media (max-width: 610px) {
+    .skill{
+        width: 6.2rem;
+        height: 2.5rem;
+        font-size: .8rem;
+    }
+    .skills-container {
+        gap: 10px;
+    }
 }

@@ -8,10 +8,10 @@ function Experience() {
     <div className="page-container h-[90vh]">
       <Header name="EXPERIENCE" />
       <div className="flex justify-center mt-14">
-        <div class="border-l-2 border-gray-600 pl-10 ml-20 flex flex-col gap-5">
+        <div className="border-l-2 border-gray-600 pl-10 ml-20 flex flex-col gap-5 sm:pl-3 sm:ml-0">
           {experienceData.map((experience, index) => (
-              <div className="experience flex mb-4" key={index}>
-                <div className="company w-48 mr-72">
+              <div className="experience flex lg:flex-col lg:gap-5 mb-4" key={index}>
+                <div className="company w-48 mr-72 sm:mr-0">
                   <div className="circle" />
                   <div className="arrow" />
                   <div className="dateRange">

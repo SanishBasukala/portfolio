@@ -4,6 +4,10 @@
   animation-iteration-count: infinite;
 }
 
+.displayText{
+    font-size: 2rem;
+}
+
 @keyframes blink {
     0% {
         opacity: 1;
@@ -13,5 +17,11 @@
     }
     100% {
         opacity: 1;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .displayText{
+        font-size: 1.5rem;
     }
   }

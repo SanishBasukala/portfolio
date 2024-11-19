@@ -15,6 +15,7 @@
     left: 0;
     width: 0;
     height: 0;
+    top: 15%;
     border-left: 10px solid transparent;
     border-top: 10px solid #0073b1;
     border-bottom: 10px solid transparent;
@@ -36,7 +37,8 @@
     position: absolute;
     color: #0073b1;
     right: -210px;
-    top: 9px;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: left;
     min-width: 210px;
     border: 1px solid #b3b3b3;
@@ -46,4 +48,28 @@
     font-family: "Roboto", 'Times New Roman', Times, serif;
     font-size: .9rem;
     max-width: 600px;
+}
+
+@media (max-width: 900px)  {
+    .description{
+        max-width: 410px;
+    }
+}
+
+@media (max-width: 600px)  {
+    .company{
+        min-width: 220px;
+        margin-bottom: 15px;
+    }
+    .dateRange{
+        left: 0;
+        top: 140%;
+        max-width: 220px;
+    }
+    .description{
+        max-width: 350px;
+    }
+    .company .circle{
+        left: -21px;
+    }
 }

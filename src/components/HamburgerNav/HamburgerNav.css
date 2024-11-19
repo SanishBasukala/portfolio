@@ -1,0 +1,30 @@
+.ham-menu > ul > li {
+    border-radius: 12px;
+    background-color: black;
+    height: 23px;
+    width: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+.ham-menu > ul > li:hover{
+    opacity: 1;
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%); 
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .ham-menu > ul > li:hover .tooltip {
+    display: block; 
+  }

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import resumePdf from "../../asssets/images/SanishResume.pdf";
 import { FaDownload } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
+import HamburgerNav from "../HamburgerNav/HamburgerNav";
 
 function NavbarV2() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,10 +23,10 @@ function NavbarV2() {
 
   const currentLocation = window.location.pathname;
   return (
-    <div className="n2-navbar flex items-center justify-between px-20 py-4">
-      <div className="font-bold text-lg w-2">Developer.</div>
+    <div className="n2-navbar grid grid-cols-[1fr,1fr,1fr] md:grid-cols-[1fr,1fr] items-center justify-between px-20 md:px-10 sm:px-6 py-4">
+      <div className="font-bold text-lg w-28">Developer.</div>
       {isMediumScreen || isSmallScreen? 
-            <div></div>
+            <HamburgerNav/>
       :
       <ul className="n2-nav-menu flex justify-center gap-10 pt-2 pb-2 rounded-3xl">
         {navItems.map((item, index) => (
@@ -50,7 +51,7 @@ function NavbarV2() {
       </ul>
       }
       {/* <ImageToPdf /> */}
-      <div className="w-36">
+      <div className="w-36 justify-self-end">
         <a
           href={resumePdf}
           download="SanishBasukalaResume.pdf"
