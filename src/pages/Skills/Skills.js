@@ -40,7 +40,6 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
       const relativeScroll = scrollTop - containerTop;
       const maxScroll = containerHeight - viewportHeight;
       const progress = Math.max(0, Math.min(1, relativeScroll / maxScroll));
-      console.log(progress)
       setScrollProgress(progress);
 
       const newIndex = Math.floor(progress * projects.length);
@@ -60,23 +59,22 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
     let transform = 'translate3d(0, 0, 0)';
     let zIndex = projects.length + 1;
   
-    // Set all cards to absolute position and stack them
     const position = 'absolute';
   
-    // Calculate opacity: 0 for non-active, 1 as it gets closer to being active
+    // Calculate opacity: fully visible when it's the active card
     let opacity = 0;
     if (relativeProgress === 0) {
-      opacity = 1;  // Active card is fully visible
+      opacity = 1;
     } else {
-      const proximity = 1 - Math.abs(relativeProgress);  // Closer to 0 means higher opacity
-      opacity = Math.min(1, Math.max(0, proximity));  // Keep opacity between 0 and 1
+      const proximity = 1 - Math.abs(relativeProgress);
+      opacity = Math.min(1, Math.max(0, proximity));
     }
   
-    // Calculate blur: more blur when farther from active card
+    // Calculate blur: less blur as card approaches active
     let blur = 0;
     if (relativeProgress !== 0) {
       const blurProgress = Math.abs(relativeProgress);
-      blur = Math.min(5, blurProgress * 5);  // Increase blur based on distance, max blur of 5px
+      blur = Math.min(5, Math.max(0, 5 * Math.pow(blurProgress, 1.5))); // Faster reduction in blur closer to active
     }
   
     if (relativeProgress < 0) {
@@ -94,24 +92,23 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
       const exitScale = 1 - 0.05 * exitProgress;
       const exitY = -120 * exitProgress;
       transform = `translate3d(0, ${exitY}%, 0) scale(${exitScale}) rotateX(${-5 * exitProgress}deg)`;
-      if (relativeProgress > 1) zIndex = -1; // Ensure cards that are fully scrolled past are behind
+      if (relativeProgress > 1) zIndex = -1;
     }
   
     return {
       position,
       transform,
       zIndex,
-      filter: `blur(${blur}px)`,  // Progressive blur based on distance from active card
+      filter: `blur(${blur}px)`,
       opacity,
       transition: 'all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1)',
       transformOrigin: 'bottom center',
-      willChange: 'transform, opacity, filter',  // Track transform, opacity, and filter
+      willChange: 'transform, opacity, filter',
     };
   };
-  
 
   return (
-    <div ref={containerRef} className="page-container xl:h-[180vh] lg:h-[250vh] md:h-[245vh] sm:h-[240vh]">
+    <div ref={containerRef} className="page-container xl:h-[350vh] lg:h-[320vh] md:h-[290vh] sm:h-[250vh]">
       <div className="sticky lg:static top-[8rem]">
       <Header name="MY SKILLSET & PROJECTS" />
       <div className="skills-projects">
@@ -143,7 +140,12 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
           </div>
           <div className="projects-container flex flex-col gap-8 h-[70vh] overflow-hidden lg:overflow-visible lg:max-w-[80vw]" >
             {projects.map((project, index) => (
-              <div className="project flex flex-col gap-5 w-[41vw] min-h-[400px] lg:min-w-[70vw] md:min-h-[350px] self-center mt-14" key={index} {...(parallax && { style: getCardStyle(index) })}>
+              <a href={project.link !== 'no link' ? project.link : '#'} 
+              onClick={(e) => {
+                if (project.link === 'no link') {
+                  e.preventDefault();
+                }
+              }} target="blank" className="project flex flex-col gap-5 w-[41vw] min-h-[400px] lg:min-w-[70vw] md:min-h-[350px] self-center mt-14 sm:mt-0" key={index} {...(parallax && { style: getCardStyle(index) })}>
                 <div className="img-container">{project.image}</div>
                 <div className="description p-1 flex flex-col gap-1 pr-5">
                   <p className="font-semibold text-base">{project.name}</p>
@@ -159,7 +161,7 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
                       ))}
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
             {/* <a
               href="/MoreProjects"

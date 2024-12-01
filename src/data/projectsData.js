@@ -1,6 +1,7 @@
 import pl from '../asssets/images/PL/home.png';
 import amaze from '../asssets/images/Amaze/amazehome.png';
-import dc from '../asssets/images/Dtrg/dc1.png';
+import dc from '../asssets/images/Dtrg/HRP.png';
+import edc from '../asssets/images/Dtrg/ERP.png';
 
 const projects= [
     {
@@ -18,11 +19,18 @@ const projects= [
         apps: ['C#', 'Unity']
     },
     {
-        name: "Doctor Commission",
-        description: "Manage commissions given to doctors.",
-        image: <img src={dc} alt='DoctorCommission'/>,
-        link:"Link to another page for images",
+        name: "Multi-tenant HRP system",
+        description: "Developed a multi-tenant HRP system for healthcare facilities, managing staff scheduling, resource allocation, patient admissions, and compliance tracking to optimize hospital operations and improve patient care.",
+        image: <img src={dc} alt='HRP System'/>,
+        link:"no link",
         apps: ['C#', 'SQL', 'HTML', 'CSS', 'Javascript']
+    },
+    {
+        name: "Multi-tenant ERP system",
+        description: "Developed a scalable multi-tenant HRP system with core HR, billing, accounting features, secure data isolation and reporting.",
+        image: <img src={edc} alt='ERP System'/>,
+        link:"no link",
+        apps: ['C#', 'SQL', 'HTML', 'CSS', 'Javascript', 'Angular']
     }
 ]
 
