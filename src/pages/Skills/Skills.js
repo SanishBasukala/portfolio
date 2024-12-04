@@ -108,7 +108,7 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
   };
 
   return (
-    <div ref={containerRef} className="page-container xl:h-[350vh] lg:h-[320vh] md:h-[290vh] sm:h-[250vh]">
+    <div ref={containerRef} className="page-container xl:h-[350vh] lg:h-[320vh] md:h-[290vh] sm:h-[330vh]">
       <div className="sticky lg:static top-[8rem]">
       <Header name="MY SKILLSET & PROJECTS" />
       <div className="skills-projects">
@@ -131,7 +131,7 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
                 )}
               </div>
             ))}
-            <div className="skill-directive xl:ml-10 lg:ml-32 sm:ml-5 flex gap-1 absolute w-96 top-[-30px]">
+            <div className="skill-directive xl:ml-10 lg:ml-32 sm:ml-5 flex gap-1 absolute w-96 top-[-30px] sm:w-72">
               <img className="mt-2" src={arrow} alt="arrow" width={40} />
               <span className="font-SofadiOne ml-3">
                 Hover to see my proficiency
