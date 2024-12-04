@@ -108,7 +108,7 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
   };
 
   return (
-    <div ref={containerRef} className="page-container xl:h-[350vh] lg:h-[320vh] md:h-[290vh] sm:h-[330vh]">
+    <div ref={containerRef} className="page-container xl:h-[350vh] lg:h-[430vh] md:h-[390vh] sm:h-[330vh]">
       <div className="sticky lg:static top-[8rem]">
       <Header name="MY SKILLSET & PROJECTS" />
       <div className="skills-projects">
@@ -138,7 +138,7 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
               </span>
             </div>
           </div>
-          <div className="projects-container flex flex-col gap-8 h-[70vh] overflow-hidden lg:overflow-visible lg:max-w-[80vw]" >
+          <div className="projects-container flex flex-col gap-8 h-[70vh] overflow-hidden lg:overflow-visible lg:max-w-none" >
             {projects.map((project, index) => (
               <a href={project.link !== 'no link' ? project.link : '#'} 
               onClick={(e) => {
