@@ -108,7 +108,7 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
   };
 
   return (
-    <div ref={containerRef} className="page-container xl:h-[350vh] lg:h-[430vh] md:h-[390vh] sm:h-[330vh]">
+    <div ref={containerRef} className="page-container xl:h-[2250px] lg:h-[2350px] md:h-[2150px] sm:h-[1830px]">
       <div className="sticky lg:static top-[8rem]">
       <Header name="MY SKILLSET & PROJECTS" />
       <div className="skills-projects">
@@ -145,9 +145,9 @@ if (isLargeScreen || isMediumScreen || isSmallScreen) {
                 if (project.link === 'no link') {
                   e.preventDefault();
                 }
-              }} target="blank" className="project flex flex-col gap-5 w-[41vw] min-h-[400px] lg:min-w-[70vw] md:min-h-[350px] self-center mt-14 sm:mt-0" key={index} {...(parallax && { style: getCardStyle(index) })}>
+              }} target="blank" className="project flex flex-col gap-5 w-[41vw] min-h-[400px] lg:min-w-[70vw] md:min-h-[350px] self-center mt-8 sm:mt-0" key={index} {...(parallax && { style: getCardStyle(index) })}>
                 <div className="img-container">{project.image}</div>
-                <div className="description p-1 flex flex-col gap-1 pr-5">
+                <div className="description p-1 flex flex-col gap-1 pr-5 bg-white">
                   <p className="font-semibold text-base">{project.name}</p>
                   <p className="text-sm text-secondary">
                     {project.description}
